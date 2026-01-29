@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Membership | Terra & Tide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .form-card {
+            background: white;
+            border-radius: 48px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+        .input-field {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(45, 45, 45, 0.1);
+            background-color: #FAFAFA;
+        }
+        .input-field:focus {
+            border-color: var(--color-terracotta);
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(163, 78, 57, 0.05);
+        }
+        .step-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: full;
+            background-color: #E5E5E5;
+            transition: all 0.3s ease;
+        }
+        .step-indicator.active {
+            background-color: var(--color-terracotta);
+            width: 24px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                    <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="Properties.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="Experience.html" class="hover:text-[#A34E39]">Experience</a>
+                <a href="About.html" class="hover:text-[#A34E39]">About</a>
+                <a href="Support.html" class="hover:text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-xs font-bold uppercase tracking-widest text-[#A34E39]">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-40 pb-24 px-6">
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-5 gap-16 items-start">
+            
+            <!-- Left Side: Context -->
+            <div class="lg:col-span-2">
+                <span class="text-[#A34E39] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Membership</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Join a community of <span class="italic font-normal">global seekers.</span></h1>
+                <p class="text-gray-500 mb-10 leading-relaxed">Membership at Terra & Tide is by application only. We seek individuals who value intentional living, local culture, and the art of slow travel.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1"><i data-lucide="sparkles" class="text-[#A34E39] w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm uppercase tracking-wide mb-1">Exclusive Access</h4>
+                            <p class="text-xs text-gray-400">Priority booking for our newest residences and hidden gems.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1"><i data-lucide="users" class="text-[#A34E39] w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm uppercase tracking-wide mb-1">Global Network</h4>
+                            <p class="text-xs text-gray-400">Connect with a vetted community of creatives and founders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Application Form -->
+            <div class="lg:col-span-3">
+                <div class="form-card p-8 md:p-12 border border-gray-100">
+                    <div class="flex space-x-2 mb-10">
+                        <div class="step-indicator active"></div>
+                        <div class="step-indicator"></div>
+                        <div class="step-indicator"></div>
+                    </div>
+
+                    <form class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 block">First Name</label>
+                                <input type="text" placeholder="Julian" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 block">Last Name</label>
+                                <input type="text" placeholder="Ross" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 block">Professional Focus</label>
+                            <select class="input-field w-full px-6 py-4 rounded-2xl text-sm appearance-none bg-no-repeat bg-[right_1.5rem_center]">
+                                <option>Creative / Artist</option>
+                                <option>Founder / Entrepreneur</option>
+                                <option>Digital Nomad / Remote Professional</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 block">Tell us about your travel philosophy</label>
+                            <textarea placeholder="What draws you to the Terra & Tide community?" rows="4" class="input-field w-full px-6 py-4 rounded-2xl text-sm resize-none"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-4 block">Preferred Regions</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 p-4 border border-gray-100 rounded-2xl cursor-pointer hover:border-[#A34E39]/30 transition-all">
+                                    <input type="checkbox" class="w-4 h-4 rounded text-[#A34E39] focus:ring-[#A34E39]">
+                                    <span class="text-xs font-medium">Europe</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-4 border border-gray-100 rounded-2xl cursor-pointer hover:border-[#A34E39]/30 transition-all">
+                                    <input type="checkbox" class="w-4 h-4 rounded text-[#A34E39] focus:ring-[#A34E39]">
+                                    <span class="text-xs font-medium">Americas</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-4 border border-gray-100 rounded-2xl cursor-pointer hover:border-[#A34E39]/30 transition-all">
+                                    <input type="checkbox" class="w-4 h-4 rounded text-[#A34E39] focus:ring-[#A34E39]">
+                                    <span class="text-xs font-medium">Asia Pacific</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-4 border border-gray-100 rounded-2xl cursor-pointer hover:border-[#A34E39]/30 transition-all">
+                                    <input type="checkbox" class="w-4 h-4 rounded text-[#A34E39] focus:ring-[#A34E39]">
+                                    <span class="text-xs font-medium">Africa</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <button type="submit" class="btn-terracotta w-full py-5 rounded-full text-sm font-bold uppercase tracking-widest shadow-xl">
+                                Submit Application
+                            </button>
+                            <p class="text-center text-[10px] text-gray-400 mt-6 uppercase tracking-widest">Typical review time: 3-5 business days</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest">© 2024 Terra & Tide Luxury Rentals</p>
+            <div class="flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                <a href="#" class="hover:text-[#A34E39]">Privacy Policy</a>
+                <a href="#" class="hover:text-[#A34E39]">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
