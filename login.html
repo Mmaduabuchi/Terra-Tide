@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Terra & Tide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .login-card {
+            background: white;
+            border-radius: 48px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+        .input-field {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(45, 45, 45, 0.1);
+        }
+        .input-field:focus {
+            border-color: var(--color-terracotta);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(163, 78, 57, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                    <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="properties.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="experience.html" class="hover:text-[#A34E39]">Experience</a>
+                <a href="about.html" class="hover:text-[#A34E39]">About</a>
+                <a href="support.html" class="hover:text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-xs font-bold uppercase tracking-widest text-[#A34E39]">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-6">
+        <div class="max-w-xl w-full">
+            <div class="login-card p-10 md:p-16 border border-gray-100">
+                <div class="text-center mb-10">
+                    <span class="text-[#A34E39] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Welcome Back</span>
+                    <h1 class="text-4xl font-bold mb-4">Member <span class="italic font-normal">Portal</span></h1>
+                    <p class="text-gray-500 text-sm">Access your curated stays and lifestyle preferences.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 block">Email Address</label>
+                        <input type="email" placeholder="name@domain.com" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 block">Password</label>
+                            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#A34E39] hover:opacity-80">Forgot?</a>
+                        </div>
+                        <input type="password" placeholder="••••••••" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+                    </div>
+
+                    <div class="flex items-center space-x-3 py-2">
+                        <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300 text-[#A34E39] focus:ring-[#A34E39]">
+                        <label for="remember" class="text-xs text-gray-500">Stay signed in for 30 days</label>
+                    </div>
+
+                    <button type="submit" class="btn-terracotta w-full py-5 rounded-full text-sm font-bold uppercase tracking-widest shadow-xl">
+                        Sign In
+                    </button>
+                </form>
+
+                <div class="mt-10 pt-10 border-t border-gray-100 text-center">
+                    <p class="text-sm text-gray-500">Not a member yet? <a href="#" class="text-[#A34E39] font-bold underline decoration-2 underline-offset-4">Apply for Membership</a></p>
+                </div>
+            </div>
+
+            <!-- Alternate Social Login -->
+            <div class="mt-8 flex flex-col items-center space-y-4">
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Or continue with</p>
+                <div class="flex space-x-4">
+                    <button class="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </button>
+                    <button class="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs text-gray-400 uppercase tracking-widest">© 2024 Terra & Tide Luxury Rentals</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
