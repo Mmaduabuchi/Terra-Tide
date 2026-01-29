@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra & Tide | Premium Short-Term Rentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+        }
+        .search-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="Properties.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="Experience.html" class="hover:text-[#A34E39]">Experience</a>
+                <a href="About.html" class="hover:text-[#A34E39]">About</a>
+                <a href="Support.html" class="hover:text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="hidden sm:block text-sm font-semibold">Sign In</button>
+                <button class="btn-terracotta px-6 py-2.5 rounded-full text-sm font-bold shadow-lg">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" 
+             alt="Luxury Property" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Your Home, <br><span class="italic text-beige-100">Across the World.</span></h1>
+            <p class="text-lg md:text-xl mb-12 font-light opacity-90 max-w-2xl mx-auto">Curated stays for digital nomads and global wanderers who refuse to compromise on style and comfort.</p>
+            
+            <!-- Search Bar UI -->
+            <div class="bg-white rounded-full p-2 md:p-3 flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 max-w-3xl mx-auto search-shadow">
+                <div class="flex-1 flex items-center space-x-3 px-6 py-2 border-b md:border-b-0 md:border-r border-gray-100 w-full">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-[#A34E39]"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-gray-400">Location</p>
+                        <input type="text" placeholder="Where are you going?" class="text-charcoal outline-none w-full bg-transparent text-sm">
+                    </div>
+                </div>
+                <div class="flex-1 flex items-center space-x-3 px-6 py-2 border-b md:border-b-0 md:border-r border-gray-100 w-full">
+                    <i data-lucide="calendar" class="w-5 h-5 text-[#A34E39]"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-gray-400">Dates</p>
+                        <p class="text-charcoal text-sm font-medium">Add dates</p>
+                    </div>
+                </div>
+                <div class="flex-1 flex items-center space-x-3 px-6 py-2 w-full">
+                    <i data-lucide="users" class="w-5 h-5 text-[#A34E39]"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-gray-400">Guests</p>
+                        <p class="text-charcoal text-sm font-medium">Add guests</p>
+                    </div>
+                </div>
+                <button class="bg-[#2D2D2D] p-4 rounded-full text-white hover:bg-black transition-colors w-full md:w-auto flex justify-center items-center">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Listings -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+                <span class="text-[#A34E39] font-bold text-sm uppercase tracking-widest">Our Collection</span>
+                <h2 class="text-4xl font-bold mt-2">Featured Residences</h2>
+            </div>
+            <a href="#" class="text-charcoal border-b-2 border-charcoal pb-1 font-bold text-sm">View All Properties</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div class="group card-hover cursor-pointer">
+                <div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">New York, NY</div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold">The Loft at Mercer</h3>
+                        <p class="text-gray-500 text-sm mt-1">2 Guests • 1 Bedroom • Work Studio</p>
+                    </div>
+                    <p class="text-lg font-bold text-[#A34E39]">$245<span class="text-sm font-normal text-gray-400">/night</span></p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group card-hover cursor-pointer">
+                <div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">Tulum, MX</div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold">Casa Terra Sanctuary</h3>
+                        <p class="text-gray-500 text-sm mt-1">4 Guests • 2 Bedrooms • Private Pool</p>
+                    </div>
+                    <p class="text-lg font-bold text-[#A34E39]">$310<span class="text-sm font-normal text-gray-400">/night</span></p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group card-hover cursor-pointer">
+                <div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">Lisbon, PT</div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold">Alfama Viewpoint Suite</h3>
+                        <p class="text-gray-500 text-sm mt-1">2 Guests • 1 Bedroom • Rooftop Access</p>
+                    </div>
+                    <p class="text-lg font-bold text-[#A34E39]">$185<span class="text-sm font-normal text-gray-400">/night</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities / Digital Nomad Focus -->
+    <section class="bg-[#2D2D2D] text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-8">Designed for the <br><span class="text-[#A34E39] italic font-normal">Modern Professional.</span></h2>
+                <p class="text-gray-400 text-lg mb-12">Every Terra & Tide property is rigorously vetted to meet the standards of international digital nomads. We focus on seamless living so you can focus on your journey.</p>
+                
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-white/5 rounded-2xl"><i data-lucide="wifi" class="w-6 h-6 text-[#A34E39]"></i></div>
+                        <div>
+                            <h4 class="font-bold">Gigabit Fiber</h4>
+                            <p class="text-sm text-gray-500">Fast, reliable connection.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-white/5 rounded-2xl"><i data-lucide="monitor" class="w-6 h-6 text-[#A34E39]"></i></div>
+                        <div>
+                            <h4 class="font-bold">Workstations</h4>
+                            <p class="text-sm text-gray-500">Ergonomic setups.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-white/5 rounded-2xl"><i data-lucide="coffee" class="w-6 h-6 text-[#A34E39]"></i></div>
+                        <div>
+                            <h4 class="font-bold">Artisan Goods</h4>
+                            <p class="text-sm text-gray-500">Local coffee & pantry.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-white/5 rounded-2xl"><i data-lucide="shield-check" class="w-6 h-6 text-[#A34E39]"></i></div>
+                        <div>
+                            <h4 class="font-bold">24/7 Security</h4>
+                            <p class="text-sm text-gray-500">Safe, gated access.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1000" alt="Work Setup">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-[#A34E39] p-8 rounded-3xl hidden lg:block">
+                    <p class="text-3xl font-bold">500+</p>
+                    <p class="text-sm uppercase tracking-widest opacity-80">Nomads Hosted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Guest Perspectives</h2>
+            <div class="w-20 h-1 bg-[#A34E39] mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-[40px] shadow-sm border border-gray-100 italic">
+                <div class="flex text-yellow-500 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-gray-600 mb-8 leading-relaxed">"The Lisbon suite was breathtaking. More than just a room, it felt like a home where I could actually get deep work done."</p>
+                <div class="flex items-center space-x-4 not-italic">
+                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="User">
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm uppercase tracking-wide">Sarah Jenkins</p>
+                        <p class="text-xs text-[#A34E39]">Digital Nomad, Tech</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[40px] shadow-sm border border-gray-100 italic">
+                <div class="flex text-yellow-500 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-gray-600 mb-8 leading-relaxed">"Absolute luxury. Terra & Tide has nailed the balance between authentic local living and five-star amenities."</p>
+                <div class="flex items-center space-x-4 not-italic">
+                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="User">
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm uppercase tracking-wide">Marcus Thorne</p>
+                        <p class="text-xs text-[#A34E39]">Creative Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[40px] shadow-sm border border-gray-100 italic">
+                <div class="flex text-yellow-500 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-gray-600 mb-8 leading-relaxed">"The check-in was seamless, and the Tulum property was even better than the photos. My go-to for rental bookings."</p>
+                <div class="flex items-center space-x-4 not-italic">
+                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="User">
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm uppercase tracking-wide">Elena Petrova</p>
+                        <p class="text-xs text-[#A34E39]">Author & Traveler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-[#F9F7F2] rounded-[48px] overflow-hidden flex flex-col lg:flex-row">
+                <!-- Contact Info Side -->
+                <div class="lg:w-1/3 bg-[#2D2D2D] p-12 lg:p-16 text-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Let's start your <br><span class="italic text-[#A34E39] font-normal">next chapter.</span></h2>
+                        <p class="text-gray-400 mb-12">Whether you're looking for a month-long residency or a weekend escape, our concierge team is here to assist.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-5 h-5 text-[#A34E39]"></i>
+                                </div>
+                                <span class="text-sm">hello@terraandtide.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-5 h-5 text-[#A34E39]"></i>
+                                </div>
+                                <span class="text-sm">+1 (555) 000-1234</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-[#A34E39]"></i>
+                                </div>
+                                <span class="text-sm">Global HQ: New York, NY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 lg:mt-0">
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-4 font-bold">Follow Our Journey</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-[#A34E39] transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                            <a href="#" class="text-white hover:text-[#A34E39] transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                            <a href="#" class="text-white hover:text-[#A34E39] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="lg:w-2/3 p-12 lg:p-16">
+                    <form class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Full Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full bg-white border border-gray-100 rounded-2xl px-6 py-4 outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Email Address</label>
+                                <input type="email" placeholder="john@example.com" class="w-full bg-white border border-gray-100 rounded-2xl px-6 py-4 outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Interested Destination</label>
+                            <select class="w-full bg-white border border-gray-100 rounded-2xl px-6 py-4 outline-none transition-all appearance-none cursor-pointer">
+                                <option>General Inquiry</option>
+                                <option>New York, NY</option>
+                                <option>Tulum, MX</option>
+                                <option>Lisbon, PT</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Message</label>
+                            <textarea rows="4" placeholder="Tell us about your travel plans..." class="w-full bg-white border border-gray-100 rounded-2xl px-6 py-4 outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-terracotta w-full md:w-auto px-10 py-5 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                        <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Redefining global living for the modern traveler. Experience curated luxury in every corner of the world.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Properties</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-charcoal">New York City</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Lisbon Coastal</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Tulum Jungle</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Paris Chic</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-charcoal">Our Mission</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Become a Host</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Trust & Safety</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Subscribe</h5>
+                    <p class="text-sm text-gray-500 mb-4">Get curated travel guides and member-only deals.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email address" class="bg-gray-50 border-none px-4 py-3 rounded-l-xl text-sm w-full outline-none focus:ring-1 focus:ring-[#A34E39]">
+                        <button class="bg-charcoal text-white px-4 py-3 rounded-r-xl transition-colors hover:bg-black">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-gray-400">© 2024 Terra & Tide Luxury Rentals. All rights reserved.</p>
+                <div class="flex space-x-8 text-xs text-gray-400">
+                    <a href="#" class="hover:text-charcoal">Privacy Policy</a>
+                    <a href="#" class="hover:text-charcoal">Terms of Service</a>
+                    <a href="#" class="hover:text-charcoal">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Add scroll effect to nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

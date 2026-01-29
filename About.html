@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Terra & Tide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+        }
+        .image-reveal {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-reveal:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation (Consistent with Index) -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                    <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="#" class="hover:text-[#A34E39]">Experience</a>
+                <a href="about.html" class="text-[#A34E39]">About</a>
+                <a href="#" class="hover:text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="btn-terracotta px-6 py-2.5 rounded-full text-sm font-bold shadow-lg">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[#A34E39] font-bold text-sm uppercase tracking-[0.3em] mb-4 block">Our Story</span>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">Redefining the art of <span class="italic font-normal">global living.</span></h1>
+            <p class="text-lg md:text-xl text-gray-500 font-light leading-relaxed">Terra & Tide was born from a simple observation: the world is getting smaller, but the need for a true sense of "home" is growing larger.</p>
+        </div>
+    </header>
+
+    <!-- Visual Storytelling -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+            <div class="md:col-span-8 rounded-[40px] overflow-hidden h-[500px]">
+                <img src="https://images.unsplash.com/photo-1449156001931-820fcf607605?auto=format&fit=crop&q=80&w=1500" class="w-full h-full object-cover image-reveal" alt="Rustic Interior">
+            </div>
+            <div class="md:col-span-4 rounded-[40px] overflow-hidden h-[500px]">
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover image-reveal" alt="Modern Detail">
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="aspect-square rounded-[60px] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-[#F9F7F2] rounded-full flex items-center justify-center p-8 text-center border border-gray-100 hidden lg:flex">
+                        <p class="text-xs font-bold uppercase tracking-widest leading-tight">Founded in <br><span class="text-2xl text-[#A34E39]">2018</span></p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">The Philosophy of <span class="italic font-normal text-[#A34E39]">Slow Travel.</span></h2>
+                    <p class="text-gray-500 text-lg mb-6 leading-relaxed">We believe that a destination isn't just a place on a map—it's a feeling of belonging. Our properties are curated not just for their aesthetic beauty, but for their ability to foster focus, creativity, and rest.</p>
+                    <p class="text-gray-500 text-lg mb-10 leading-relaxed">For the digital nomad, the creative, and the seeker, we provide more than a roof. We provide a sanctuary that bridges the gap between the familiar and the unknown.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 p-4 border border-gray-100 rounded-2xl">
+                            <i data-lucide="check-circle" class="text-[#A34E39] w-6 h-6"></i>
+                            <span class="font-bold text-sm uppercase tracking-wide">Vetted for Work & Life</span>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 border border-gray-100 rounded-2xl">
+                            <i data-lucide="check-circle" class="text-[#A34E39] w-6 h-6"></i>
+                            <span class="font-bold text-sm uppercase tracking-wide">Locally Integrated Designs</span>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 border border-gray-100 rounded-2xl">
+                            <i data-lucide="check-circle" class="text-[#A34E39] w-6 h-6"></i>
+                            <span class="font-bold text-sm uppercase tracking-wide">Uncompromising Standards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Grid -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Our Core Values</h2>
+            <div class="w-20 h-1 bg-[#A34E39] mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center p-8">
+                <div class="w-16 h-16 bg-[#2D2D2D] text-[#A34E39] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="heart" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Empathy First</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">We anticipate the needs of our guests before they even arrive, ensuring every stay is seamless and personal.</p>
+            </div>
+            <div class="text-center p-8">
+                <div class="w-16 h-16 bg-[#2D2D2D] text-[#A34E39] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="globe" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Global Stewardship</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">We respect the communities we enter, working with local artisans and sustainable practices wherever possible.</p>
+            </div>
+            <div class="text-center p-8">
+                <div class="w-16 h-16 bg-[#2D2D2D] text-[#A34E39] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="zap" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Intentional Tech</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Technology should serve, not distract. We integrate high-end tech for productivity without sacrificing soul.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-[#2D2D2D] text-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 italic">Ready to find your <br>next residence?</h2>
+            <p class="text-gray-400 mb-12 text-lg">Explore our curated collection of homes in the world's most vibrant neighborhoods.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html" class="btn-terracotta px-10 py-4 rounded-full font-bold shadow-xl">Explore Properties</a>
+                <a href="#" class="px-10 py-4 border border-white/20 rounded-full font-bold hover:bg-white/10 transition-all">Join the Club</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with Index) -->
+    <footer class="bg-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                        <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Redefining global living for the modern traveler. Experience curated luxury in every corner of the world.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Properties</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-charcoal">New York City</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Lisbon Coastal</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Tulum Jungle</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Paris Chic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="about.html" class="hover:text-charcoal">Our Mission</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Become a Host</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Trust & Safety</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-gray-100 text-center">
+                <p class="text-xs text-gray-400">© 2024 Terra & Tide Luxury Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

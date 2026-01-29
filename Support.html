@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Terra & Tide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+        }
+        .contact-card {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                    <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="experience.html" class="hover:text-[#A34E39]">Experience</a>
+                <a href="about.html" class="hover:text-[#A34E39]">About</a>
+                <a href="support.html" class="text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="btn-terracotta px-6 py-2.5 rounded-full text-sm font-bold shadow-lg">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-20 px-6 bg-white/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[#A34E39] font-bold text-sm uppercase tracking-[0.3em] mb-4 block">Help Center</span>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">How can we <span class="italic font-normal text-[#A34E39]">assist you?</span></h1>
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="Search for answers..." class="w-full px-8 py-5 rounded-full border border-gray-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A34E39]/20 text-lg">
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-[#2D2D2D] text-white p-3 rounded-full">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Support Options Grid -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-[48px] border border-gray-100 contact-card shadow-sm">
+                <div class="w-14 h-14 bg-[#F9F7F2] rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="message-square" class="text-[#A34E39] w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Live Chat</h3>
+                <p class="text-gray-500 text-sm mb-8 leading-relaxed">Speak with our 24/7 concierge team for immediate assistance during your stay.</p>
+                <button class="text-[#A34E39] font-bold text-sm uppercase tracking-widest flex items-center group">
+                    Start Chat <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <div class="bg-[#2D2D2D] text-white p-10 rounded-[48px] contact-card shadow-xl">
+                <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="phone" class="text-[#A34E39] w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Priority Line</h3>
+                <p class="text-gray-400 text-sm mb-8 leading-relaxed">Dedicated phone support for residents and members. Average wait time: < 2 mins.</p>
+                <button class="text-white font-bold text-sm uppercase tracking-widest flex items-center group">
+                    Call Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <div class="bg-white p-10 rounded-[48px] border border-gray-100 contact-card shadow-sm">
+                <div class="w-14 h-14 bg-[#F9F7F2] rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="mail" class="text-[#A34E39] w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Email Support</h3>
+                <p class="text-gray-500 text-sm mb-8 leading-relaxed">For booking inquiries, partnership requests, or feedback on your experience.</p>
+                <button class="text-[#A34E39] font-bold text-sm uppercase tracking-widest flex items-center group">
+                    Send Email <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-[#A34E39] mx-auto"></div>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group border-b border-gray-100">
+                    <summary class="flex justify-between items-center py-6 cursor-pointer list-none">
+                        <span class="text-lg font-bold">What is the check-in and check-out policy?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-gray-500 leading-relaxed">
+                        Standard check-in is at 3:00 PM and check-out is at 11:00 AM. We offer early arrival and late departure options for members, subject to availability. All access is handled via our secure digital key system.
+                    </div>
+                </details>
+
+                <details class="group border-b border-gray-100">
+                    <summary class="flex justify-between items-center py-6 cursor-pointer list-none">
+                        <span class="text-lg font-bold">How does the digital concierge service work?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-gray-500 leading-relaxed">
+                        Once your booking is confirmed, you'll receive access to our mobile app. You can chat directly with your Lifestyle Manager, book experiences, and request housekeeping services instantly.
+                    </div>
+                </details>
+
+                <details class="group border-b border-gray-100">
+                    <summary class="flex justify-between items-center py-6 cursor-pointer list-none">
+                        <span class="text-lg font-bold">Are pets allowed in Terra & Tide properties?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-gray-500 leading-relaxed">
+                        Many of our residences are pet-friendly. Please check the specific property details or filter by "Pet Friendly" during your search. A small cleaning fee may apply.
+                    </div>
+                </details>
+
+                <details class="group border-b border-gray-100">
+                    <summary class="flex justify-between items-center py-6 cursor-pointer list-none">
+                        <span class="text-lg font-bold">What is your cancellation policy?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-gray-500 leading-relaxed">
+                        We offer a full refund for cancellations made at least 14 days before check-in. For cancellations within 7-14 days, a 50% refund is provided. Cancellations within 7 days are non-refundable.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Offices -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="rounded-[60px] overflow-hidden aspect-video shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Office Space">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Our <span class="italic font-normal text-[#A34E39]">Global Presence.</span></h2>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">New York Headquarters</h4>
+                        <p class="text-lg">250 Hudson Street, Floor 12<br>New York, NY 10013</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">Lisbon Studio</h4>
+                        <p class="text-lg">Rua da Prata 80<br>1100-415 Lisbon, Portugal</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">Singapore Hub</h4>
+                        <p class="text-lg">7 Straits View, Marina One<br>Singapore 018936</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                        <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Redefining global living for the modern traveler. Experience curated luxury in every corner of the world.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Properties</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-charcoal">New York City</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Lisbon Coastal</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Tulum Jungle</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Paris Chic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="about.html" class="hover:text-charcoal">Our Mission</a></li>
+                        <li><a href="experience.html" class="hover:text-charcoal">Experiences</a></li>
+                        <li><a href="support.html" class="hover:text-charcoal text-[#A34E39]">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-gray-100 text-center">
+                <p class="text-xs text-gray-400">© 2024 Terra & Tide Luxury Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Terra & Tide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-beige: #F9F7F2;
+            --color-terracotta: #A34E39;
+            --color-charcoal: #2D2D2D;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-beige);
+            color: var(--color-charcoal);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+        }
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .btn-terracotta:hover {
+            opacity: 0.9;
+        }
+        .image-reveal {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-reveal:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                    <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="hover:text-[#A34E39]">Properties</a>
+                <a href="experience.html" class="text-[#A34E39]">Experience</a>
+                <a href="about.html" class="hover:text-[#A34E39]">About</a>
+                <a href="#" class="hover:text-[#A34E39]">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="btn-terracotta px-6 py-2.5 rounded-full text-sm font-bold shadow-lg">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[#A34E39] font-bold text-sm uppercase tracking-[0.3em] mb-4 block">The Journey</span>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">Beyond the four <span class="italic font-normal">walls.</span></h1>
+            <p class="text-lg md:text-xl text-gray-500 font-light leading-relaxed">At Terra & Tide, a stay is more than a booking. It is an invitation to immerse yourself in local culture with the comfort of a world-class residence.</p>
+        </div>
+    </header>
+
+    <!-- Visual Storytelling Grid -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+            <div class="md:col-span-4 rounded-[40px] overflow-hidden h-[500px]">
+                <img src="https://images.unsplash.com/photo-1516483642775-820fcf607605?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover image-reveal" alt="Local Cuisine">
+            </div>
+            <div class="md:col-span-8 rounded-[40px] overflow-hidden h-[500px]">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1500" class="w-full h-full object-cover image-reveal" alt="City Sunset">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Offerings -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Curated <span class="italic font-normal text-[#A34E39]">Concierge.</span></h2>
+                    <p class="text-gray-500 text-lg mb-6 leading-relaxed">Every neighborhood has a rhythm. Our local experts provide you with the keys to the city—from private dinner reservations at hidden bistros to sunrise yoga on secret rooftops.</p>
+                    
+                    <div class="grid gap-6 mt-10">
+                        <div class="flex items-start space-x-6 p-6 border border-gray-100 rounded-[32px] hover:shadow-xl hover:shadow-gray-200/50 transition-all">
+                            <div class="w-12 h-12 bg-[#2D2D2D] rounded-2xl flex items-center justify-center shrink-0">
+                                <i data-lucide="map" class="text-[#A34E39] w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Bespoke Itineraries</h4>
+                                <p class="text-sm text-gray-500">Customized daily guides tailored to your specific interests and work-life balance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6 p-6 border border-gray-100 rounded-[32px] hover:shadow-xl hover:shadow-gray-200/50 transition-all">
+                            <div class="w-12 h-12 bg-[#2D2D2D] rounded-2xl flex items-center justify-center shrink-0">
+                                <i data-lucide="shopping-bag" class="text-[#A34E39] w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Artisan Workshops</h4>
+                                <p class="text-sm text-gray-500">Private sessions with local craftspeople, from ceramicists to master chefs.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6 p-6 border border-gray-100 rounded-[32px] hover:shadow-xl hover:shadow-gray-200/50 transition-all">
+                            <div class="w-12 h-12 bg-[#2D2D2D] rounded-2xl flex items-center justify-center shrink-0">
+                                <i data-lucide="car" class="text-[#A34E39] w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Seamless Transit</h4>
+                                <p class="text-sm text-gray-500">Luxury airport transfers and on-call private transport within the city.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[3/4] rounded-[60px] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Tiers -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Choose Your Pace</h2>
+            <div class="w-20 h-1 bg-[#A34E39] mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Tier 1 -->
+            <div class="bg-[#2D2D2D] text-white p-10 rounded-[48px] relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
+                    <i data-lucide="coffee" class="w-24 h-24"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">The Essentials</h3>
+                <p class="text-gray-400 text-sm mb-8">Perfect for the independent traveler who values premium comfort and high-speed autonomy.</p>
+                <ul class="space-y-4 mb-10 text-sm">
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>High-Speed Workspace</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Local Pantry Welcome Kit</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Digital City Guide</span></li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl border border-white/20 font-bold text-sm hover:bg-white/10 transition-all">Included with Stay</button>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="bg-white p-10 rounded-[48px] shadow-xl shadow-gray-200/50 border border-gray-100 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="sparkles" class="w-24 h-24 text-[#A34E39]"></i>
+                </div>
+                <span class="bg-[#A34E39] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-6 inline-block">Most Popular</span>
+                <h3 class="text-2xl font-bold mb-4">The Immersion</h3>
+                <p class="text-gray-500 text-sm mb-8">For those looking to deeply connect with the neighborhood while maintaining productivity.</p>
+                <ul class="space-y-4 mb-10 text-sm">
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Personal Lifestyle Manager</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>2 Curated Local Experiences</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Weekly Housekeeping+</span></li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl btn-terracotta font-bold text-sm shadow-lg shadow-[#A34E39]/20">Upgrade Stay</button>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="bg-white p-10 rounded-[48px] border border-gray-100 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="crown" class="w-24 h-24 text-charcoal"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">The Residency</h3>
+                <p class="text-gray-500 text-sm mb-8">The ultimate turnkey lifestyle. Fully catered, fully serviced, and uniquely inspired.</p>
+                <ul class="space-y-4 mb-10 text-sm">
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Private Chef Services</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Chauffeur on Demand</span></li>
+                    <li class="flex items-center space-x-3"><i data-lucide="check" class="w-4 h-4 text-[#A34E39]"></i> <span>Customized Office Setup</span></li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl border border-charcoal font-bold text-sm hover:bg-charcoal hover:text-white transition-all">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-[#A34E39] text-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 italic">Life is better when <br>shared.</h2>
+            <p class="text-white/80 mb-12 text-lg">Inquire about our group residencies and corporate retreats in any of our global locations.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-white text-[#A34E39] px-10 py-4 rounded-full font-bold shadow-xl hover:bg-gray-100 transition-all">View All Experiences</a>
+                <a href="#" class="px-10 py-4 border border-white/40 rounded-full font-bold hover:bg-white/10 transition-all">Download Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-[#A34E39] rounded-full"></div>
+                        <span class="text-xl font-bold tracking-tight">TERRA & TIDE</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Redefining global living for the modern traveler. Experience curated luxury in every corner of the world.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Properties</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-charcoal">New York City</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Lisbon Coastal</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Tulum Jungle</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Paris Chic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="about.html" class="hover:text-charcoal">Our Mission</a></li>
+                        <li><a href="experience.html" class="hover:text-charcoal">Experiences</a></li>
+                        <li><a href="#" class="hover:text-charcoal">Trust & Safety</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#A34E39] hover:text-white transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-gray-100 text-center">
+                <p class="text-xs text-gray-400">© 2024 Terra & Tide Luxury Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
